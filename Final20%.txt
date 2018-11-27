@@ -1,0 +1,47 @@
+------punto 11.1
+
+create or replace function divisible_sum_pairs (k in number)
+return number is
+    TYPE number_array IS VARRAY(50) OF INTEGER;
+    ari number;
+    arj number;
+begin
+    matriz := number_array(1,2,3,4,5,6);
+    for i in matriz.first .. matriz.last loop
+    
+        if i <= 1 or i >=100 then
+            DBMS_OUTPUT.PUT_LINE('La matrizno cumple con la longitud deseada');
+        end if;
+        
+        if k <= 1 or k >=100 then
+            DBMS_OUTPUT.PUT_LINE('El valor de K no cumple con los parametros');
+        end if;
+    end loop;
+    
+    for i in matriz.first .. matriz.last loop
+        for j in matriz.first .. matriz.last loop
+
+    end if;
+    
+    end loop;
+end;
+
+------PUNTO 11.2
+
+CREATE OR REPLACE FUNCTION find_digits(ENTERO INTEGER)
+RETURN INTEGER IS
+    I INTEGER;= 1;
+    POSICION INTEGER := 0;
+    CONTADOR INTEGER := 0;
+BEGIN
+    WHILE (I <= LENGTH(ENTERO)) LOOP
+        POSICION := INSTR(ENTERO, CARACTER, 1)
+        IF POSICION = 0 THEN
+            I ;= LENGTH(ENTERO) + 1;
+        ELSE
+            I := POSICION + 1;
+            CONTADOR := CONTADOR + 1;
+        END IF;
+    END LOOP;
+    RETURN CONTADOR;
+END
